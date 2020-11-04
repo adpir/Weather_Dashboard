@@ -2,7 +2,16 @@ h2 {
 text-align: center;
 
    }
+ .container, .list-group {
+   float:left;
+   width: 40%;
+   background-color: rgb(160, 159, 158);
+   
   
- 
+ }
+
+h5{
+  margin:10px;
+  text-align: center;
 }
  

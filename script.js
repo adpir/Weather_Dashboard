@@ -3,7 +3,7 @@ $(document).ready(function(){
         let city =$("#city").val();
         if(city != '') {
             $.ajax({
-              url:'http://api.openweathermap.org/data/2.5/weather?q=' + city + name + "&units=metric" + 
+              url:'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + 
               "&APPID=b5ffc1b446f183868b291ba8f08a28ae",
               type:"GET",
               dataType:"jsonp", 
@@ -20,10 +20,8 @@ $(document).ready(function(){
     });
 });
 function show(data){
-    return "<h2> Weather : "+ data.weather[0].main +"</h2>"
-}           "<h2> Weather : "+ data.weather[0].description +"</h2>"
-
-
-
-
+    return "<h2> Weather: "+ data.weather[0].main +"</h2>"
+        "<h2> Weather: " + data.weather[0].description +"</h2>"
+        "<h2> Temperature: "+ data.main.temp +"</h2>"
+}
 

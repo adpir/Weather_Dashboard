@@ -10,7 +10,7 @@
     <!---- Link Css style-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!--- Weather API -->
-    <script src="https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid=b5ffc1b446f183868b291ba8f08a28ae"></script>
+   
   
     <title>Weather Dashboard</title>
 </head>
@@ -39,8 +39,8 @@
 <div class= "row form-group form-inline"> 
     <input type="text" placeholder="City Name" name="city" id="city" class="form-control">
     <button id="submit" class="btn btn-primary"> Search City</button>
-
 </div>
+ 
   </div>
 
 <br>
@@ -61,7 +61,7 @@
   <div class="card">
     <div class="card-body">
       <ul class="Weather-list">
-      
+        <div id="show"></div>
     </div>
   </div>
  </ul>
@@ -71,13 +71,6 @@
 
 
 
-
-
-
-
-
-
-    
-    <script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>

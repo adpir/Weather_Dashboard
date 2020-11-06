@@ -5,13 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---Bootstrap link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!--- Jquery CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!---- Link Css style-->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--- Weather API -->
-   
-  
     <title>Weather Dashboard</title>
 </head>
 <body>
@@ -39,39 +34,93 @@
 <div class= "row form-group form-inline"> 
     <input type="text" placeholder="City Name" name="city" id="city" class="form-control">
     <button id="submit" class="btn btn-primary"> Search City</button>
+    <span class ="msg"></span>
 </div>
  
   </div>
 
 <br>
  <ul class="list-group">
-    <li class="list-group-item">California</li>
+    <li class="list-group-item"></li>
 
-    <li class="list-group-item list-group-item-primary">Chicago</li>
-    <li class="list-group-item list-group-item-secondary">New York</li>
-    <li class="list-group-item list-group-item-success">Orlando</li>
-    <li class="list-group-item list-group-item-danger">San Fransisco</li>
-    <li class="list-group-item list-group-item-warning">Puerto Rico</li>
-    <li class="list-group-item list-group-item-info">India</li>
-    <li class="list-group-item list-group-item-light">Costa Rica</li>
+    <li class="list-group-item list-group-item-primary"></li>
+    <li class="list-group-item list-group-item-secondary"></li>
+    <li class="list-group-item list-group-item-success"></li>
+    <li class="list-group-item list-group-item-danger"></li>
+    <li class="list-group-item list-group-item-warning"></li>
+    <li class="list-group-item list-group-item-info"></li>
+    <li class="list-group-item list-group-item-light"></li>
     
   </ul>
   </div>
 </div>
-  <div class="card">
+  <div class="card" id="Weatherlist">
     <div class="card-body">
         <div id="show"></div>
         <div id="uvi"></div>
     </div>
+ </div>
+  <br>
+ 
+  <div class="ForescastInfo" id= "Dailyforcast"> <h5> 5 Days Forecast </h5> 
+    <div class ="row"> 
+  <div class="well col-md-6 col-md-offset-3" id="wrap" >
+
+      <h5 class="card-title">Primary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       <div class ="icon"></div>
+    </div>
   </div>
-  <div class=" row Weather-list  m-2 p-3"></div>
+</div>
+
+  <div class="card text-white bg-success mb-3" >
+    
+    <div class="card-body">
+      <h5 class="card-title">Success card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  
+  <div class="card text-white bg-warning mb-3" >
+    
+    <div class="card-body">
+      <h5 class="card-title">Warning card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+  <div class="card text-white bg-success mb-3" >
+    <div class="card-body">
+      <h5 class="card-title">Primary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+  <div class="card text-white bg-primary mb-3" >
+    <div class="card-body">
+      <h5 class="card-title">Primary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+
+</div>
+</div>
+    
  
 
-
-
-
-
-
+<!-----Ajax Link--->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--- Jquery CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="script.js"></script>
+
+ <!---Add a Footer-->
+ <div class="fixed-bottom">
+  <footer class="footer">
+   <p id="footer-text">&copy; Copyright</p>
+ </footer>
+</div>
+
 </body>
 </html>

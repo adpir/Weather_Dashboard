@@ -1,20 +1,33 @@
 h2 {
-text-align: center;
-
-   }
- .container, .list-group {
-   float:left;
-   width: 40%;
-   background-color: rgb(160, 159, 158);
-   
-  
- }
-
-h5{
-  margin:10px;
   text-align: center;
-}
- 
-.card{
-  max-width: 33%;
-}
+  
+     }
+   .container {
+     float:left;
+     width: 30%;
+     margin:0px;
+     background-color: rgb(160, 159, 158);
+     padding-bottom:170px;
+    
+   }
+  
+  h5{
+    margin:10px;
+    text-align: center;
+  }
+   
+  .bg-primary, .bg-success,.bg-warning,.bg-info{
+    width: 10%;
+    height:40%;
+    position:static;
+    display: inline-block;
+    
+    
+  }
+  ul .list-group{
+    width:50%;
+    margin: 100px;
+    float: left;
+    
+  }
+  

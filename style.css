@@ -30,4 +30,47 @@ h2 {
     float: left;
     
   }
+  .row2{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;
+ }
+ section {
+   width: 100%;
+   min-height:100px;
+   display:flex;
+   align-items: center;
+   background-color:rgb(98, 98, 98);
+   padding:100px 0;
+  
+ }
+ #container2 {
+   background-color:turquoise;
+    width: 200px;
+   height: 300px;
+   position: relative;
+   align-items: center;
+  display: center;
+justify-content: center;
+filter: blur(1px);
+
+
+ }
+ #container,.details{
+width: 80%;
+margin:0 auto;
+background-color:silver;
+text-align: center;
+padding:30px 10px;
+border-radius: 8px;
+ }
+ .temp {
+   font-size: 38px;
+   color:black;
+  
+ }
+
+ .status{
+margin:10px 0 30px;
+ }
   

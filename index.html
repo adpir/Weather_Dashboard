@@ -35,6 +35,7 @@
     <input type="text" placeholder="City Name" name="city" id="city" class="form-control">
     <button id="submit" class="btn btn-primary"> Search City</button>
     <span class ="msg"></span>
+    <!--History tag needed-->
 </div>
  
   </div>
@@ -64,12 +65,11 @@
   <br>
   <br>
   
-    <h3> 5- Day Forecast</h3>
-  <section> 
+  
+  <!-- <section> 
   
     <div class="container" id=container2> 
-  <div class="row2"></div>
- 
+  <div class="row2"> 
  <div class="details">
     <h3 class="temp">30<h3>
       <h3 class="status">Cloudy</h3>
@@ -79,82 +79,105 @@
  <p>Temp</p>
  <p>Huminity</p>
  <div id="icon2"></div>
-</div>
   </div>
+</div>
  </section>
- <section> 
+ <section>  -->
   
-  <div class="container" id=container2> 
-<div class="row2"></div>
+  <h2>5- Day Forecast</h2>
 
-<div class="details">
-  <h3 class="temp">30<h3>
-    <h3 class="status">Cloudy</h3>
-<div id="weatherInfo"></div>
-<div class="info-icon"></div>
-<p>Date</p>
-<p>Temp</p>
-<p>Huminity</p>
-<div id="icon2"></div>
-</div>
-</div>
-</section>
-<section> 
+  <div class="row">
+    <div class="column" style="background-color:blue">
+      <div id="date"> 08/20/2020</div>
+      <div class="info-icon"></div>
+      <h3 class="name"><h3>
+        <h3 class="status">Cloudy</h3>
+  <div id="weatherInfo"></div>
+   <p id="temp">Temp</p>
+   <p id="huminity"> Huminity</p>
+    </div>
+    <div class="column" style="background-color:blue">
+      <div id="date"> 08/20/2020</div>
+      <div class="info-icon"></div>
+      <h3 class="temp">30<h3>
+        <h3 class="status">Cloudy</h3>
+  <div id="weatherInfo"></div>
   
-  <div class="container" id=container2> 
-<div class="row2"></div>
+   <p>Temp</p>
+   <p>Huminity</p>
 
-<div class="details">
-  <h3 class="temp">30<h3>
-    <h3 class="status">Cloudy</h3>
-<div id="weatherInfo"></div>
-<div class="info-icon"></div>
-<p>Date</p>
-<p>Temp</p>
-<p>Huminity</p>
-<div id="icon2"></div>
-</div>
-</div>
-</section>
-<section> 
+    </div>
+    <div class="column" style="background-color:blue;">
+      <div id="date"> 08/20/2020</div>
+      <h3 class="temp">30<h3>
+        <h3 class="status">Cloudy</h3>
+  <div id="weatherInfo"></div>
   
-  <div class="container" id=container2> 
-<div class="row2"></div>
-
-<div class="details">
-  <h3 class="temp">30<h3>
-    <h3 class="status">Cloudy</h3>
-<div id="weatherInfo"></div>
-<div class="info-icon"></div>
-<p>Date</p>
-<p>Temp</p>
-<p>Huminity</p>
-<div id="icon2"></div>
-</div>
-</div>
-</section>
-<section> 
+   <p>Temp</p>
+   <p>Huminity</p>
+   <div id="icon2"></div> 
+    
+    </div>
+    <div class="column" style="background-color:blue;">
+      <div id="date"> 08/20/2020</div>
+      <h3 class="temp">30<h3>
+        <h3 class="status">Cloudy</h3>
+  <div id="weatherInfo"></div>
   
-  <div class="container" id=container2> 
-<div class="row2"></div>
+   <p>Temp</p>
+   <p>Huminity</p>
+   <div id="icon2"></div> 
+      
+    </div>
+  </div>
 
-<div class="details">
-  <h3 class="temp">30<h3>
-    <h3 class="status">Cloudy</h3>
-<div id="weatherInfo"></div>
-<div class="info-icon"></div>
-<p>Date</p>
-<p>Temp</p>
-<p>Huminity</p>
-<div id="icon2"></div>
-</div>
-</div>
-</section>
+    <!-- <div class="column" style="background-color:#aaa;">
+      <div class="details">
+        <h3 class="temp">30<h3>
+          <h3 class="status">Cloudy</h3>
+    <div id="weatherInfo"></div>
+    <div class="info-icon"></div>
+         <p>Temp</p>
+      <p>Huminity</p>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+      <div class="details">
+        <h3 class="temp">30<h3>
+          <h3 class="status">Cloudy</h3>
+    <div id="weatherInfo"></div>
+    <div class="info-icon"></div>
+      <p>Date</p>
+ <p>Temp</p>
+ <p>Huminity</p>
+    </div>
+    <div class="column" style="background-color:#ccc;">
+      <div class="details">
+        <h3 class="temp">30<h3>
+          <h3 class="status">Cloudy</h3>
+    <div id="weatherInfo"></div>
+    <div class="info-icon"></div>
+      <p>Date</p>
+ <p>Temp</p>
+ <p>Huminity</p>
+    </div>
+    <div class="column" style="background-color:#ddd;">
+      <div class="details">
+        <h3 class="temp">30<h3>
+          <h3 class="status">Cloudy</h3>
+    <div id="weatherInfo"></div>
+    <div class="info-icon"></div>
+      <p>Date</p>
+      <p>Temp</p>
+      <p>Huminity</p>
+    </div>
+  </div> -->
 <!-----Ajax Link--->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--- Jquery CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script src="script.js"></script>
+<!---Moments Js script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="script.js"></script>
 
  <!---Add a Footer-->
  <div class="fixed-bottom">
@@ -162,6 +185,7 @@
    <p id="footer-text">&copy; Copyright</p>
  </footer>
 </div>
+
 
 </body>
 </html>

@@ -1,25 +1,38 @@
+function Citylist(CityNames){
+    console.log(CityNames)
+    $(".list-group").prepend(`<li class="list-group-item">${CityNames[0]}</li>`);
+    $(".list-group").prepend(`<li class="list-group-item">${CityNames[1]}</li>`);
+    $(".list-group").prepend(`<li class="list-group-item">${CityNames[2]}</li>`);
+            //History item saved//
+             // $(".list-group-item").on("click",function(){
+            //     console.log()
+            //  })
+}
 let previouscity = JSON.parse(localStorage.getItem("#Weatherlist")) || []
-$("#city").html(previouscity[0])
+let place = '<input type="text" value=" ' + previouscity[0] + '" name="city" id="city" class="form-control">'
+ Citylist(previouscity);
+$("#city").replaceWith(place);
 $(document).ready(function() {
     $("#submit").click(function() {
         let city = $("#city").val();
         if (city != '') {
             console.log(city)
             Weather(city)
-            
+           
            previouscity.push(city)
            console.log(previouscity)
             localStorage.setItem("#Weatherlist", JSON.stringify(previouscity));
 
-            $(".list-group").prepend(`<li class="list-group-item">${city}</li>`);
-            //History item saved//
-            //  $(".list-group-item").on("click",function(){
-            //     console.log()
-            //  })
+            
         } else {
             $(".msg").html('Error-Please enter a City');
         }
     });
+
+    
+        
+    
+
 
     function Weather(city) {
         $.ajax({

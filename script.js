@@ -1,13 +1,16 @@
 let previouscity = JSON.parse(localStorage.getItem("#Weatherlist")) || []
+$("#city").html(previouscity[0])
 $(document).ready(function() {
     $("#submit").click(function() {
         let city = $("#city").val();
         if (city != '') {
             console.log(city)
             Weather(city)
+            
+           previouscity.push(city)
+           console.log(previouscity)
+            localStorage.setItem("#Weatherlist", JSON.stringify(previouscity));
 
-            previouscity.push(city)
-            localStorage.setItem("#Weatherlist".JSON.stringify(previouscity));
             $(".list-group").prepend(`<li class="list-group-item">${city}</li>`);
             //History item saved//
             //  $(".list-group-item").on("click",function(){
@@ -35,17 +38,10 @@ $(document).ready(function() {
                 FiveDaysForecast(data.coord.lat, data.coord.lon);
                 //  let iconcode =data.weather[0].icon
                 //  let iconURL= "https://openweathermap.org/img/w" + iconcode + ".png";
-                //  $("#icon").innerHtml("src'",iconURL + "'/>");
-
-
+                //  $("#icon").innerHtml("src'",iconURL + "'/>")
 
             }
         });
-
-
-
-
-
 
         //                 // }
         //         //  let FiveDays=FiveDaysForecast(data);
@@ -54,8 +50,6 @@ $(document).ready(function() {
 
         // }});
         // "<h2>uvi-index:" +FiveDays.current.uvi +"</h2>"
-
-
 
     }
 
@@ -72,53 +66,36 @@ $(document).ready(function() {
                 console.info("Weather API", data);
 
                 var forecastPlaceholder = $("#forecast") // pointer to that div
-
+                
                 // add a row div to the forecast div
                 var forecastRowDiv = $('<div class="row"></div>')
                 forecastPlaceholder.append(forecastRowDiv)
-
+               
+              
                 for (i = 0; i < 5; i++) {
                     // create a styled div so CSS works
                     var styledDiv = $('<div class="col-sm-2" style="background-color:lightblue"></div>')
 
                     // add data from the API to styled div
-                    styledDiv.append("<p>" + data.daily[i].temp.day + "</p>")
-                    styledDiv.append("<p>" + data.daily[i].humidity + "</p>")
-                    styledDiv.append("<p>" + data.daily[i].uvi + "</p>")
+                    // styledDiv.append("Temp:" + KevinToFarhenheit(data.daily[i].temp.day + "</p>"))
+                   
+                    styledDiv.append("Temp:" +  KevinToFarhenheit(data.daily[i].temp.day) + "</p>")
+                    styledDiv.append("Humidity:" + data.daily[i].humidity + "</p>")
                     
-
 
                     // in the end put the styled div in the main row div
                     forecastRowDiv.append(styledDiv)
                 }
-
-                // $("#temp").html("Temp: " + data.daily[1].temp.day);
+ 
                 // $("#date").html(moment(data.daily[1].dt).format("MMM Do YY"));
-                // $("#humidity").html("Humidity:" + data.daily[1].humidity);
-                // $("#temp2").html("Temp: " + KevinToFarhenheit(data.daily[1].temp.day));
-                // $("#date2").html(data.list[0].dt_txt);
-                // $("#humidity2").html("Humidity:" + data.list[0].main.humidity);
-                // $("#temp3").html("Temp: " + data.daily[2].temp.day);
-                // $("#date3").html(data.list[0].dt_txt);
-                // $("#humidity3").html("Humidity:" + data.list[0].main.humidity);
-                // $("#temp4").html("Temp: " + data.daily[3].temp.day);
-                // $("#date4").html(data.list[0].dt_txt);
-                // $("#humidity4").html("Humidity:" + data.list[0].main.humidity);
-                // for (let i=0; i< data.length; i=i +8) {
-                //     let FiveDays=show(data);
-                //     $("#show").html(FiveDays);
-
-
-
-
-
+            
 
                 // // // // //     <img src="https://openweathermap.org/img/wn/${data[i].weather[0].icon}@2x.png"/></div>`
 
                 // // }
 
             }
-        }); // //  $("#weatherInfo").html(container2)
+        }); 
         // }
         // moment(data.daily[1].dt).format('YYYY-MM-DD')
     }
@@ -136,19 +113,7 @@ $(document).ready(function() {
             }
         })
     }
-    //      function GenerateForecast(data){
-    //          let html =`
-    //           <h3 class="temp">${data.main.temp}</h3>
-    //         <h3 class="status">${data.main.list.map(item =>item).join
-    //     ('')}</h3>
-    // //   <div id="weatherInfo">
-    // //   <div class="info-icon"></div>
-    // //    <p>Date</p>
-    // //    <p>Temp</p>
-    // //    <p>Huminity</p>
-    // //    <div id="icon2"></div>
-    // //     </div>
-    // //     `; 
+     
 
     //         }
     //    $(".weatherInfo").html()
@@ -218,45 +183,5 @@ $(document).ready(function() {
 
 
 
-
-
-    //   function forecastshow(data){
-    //       console.log(data)
-    //       return "<h2>Name:" +data.temp +"</h2>" +
-    //       "<h2>Weather:" +data.weather[0].main +"</h2>"+
-    //       "<h2>Description: "+data.sys +"</h2>"+
-    //       "<h2>Temperature:" +data.humidity+"</h2>" +
-    //       "<h2>Humidity:" +data.dt +"</h2>"
-
-
-
-    //   }
-
-
-    //       function FiveDaysForecast (data){
-    //           $.ajax({
-    //          url:'https://api.openweathermap.org/data/2.5/onecall?lat=' + data.coord.lat +'&lon='+ data.coord.lon + '&appid=b5ffc1b446f183868b291ba8f08a28ae',
-    //          method:"GET",
-    //          dataType:"json",
-    //          success: function(FiveDays){
-    //          return FiveDays;
-
-    //       }
-
-
-    // //         // let Weatherlist =show(data,FiveDays);
-
-    // // //         for ( let i=0; i< data.length;i=i +8){
-    // // //       let data= data[i];
-    // // //       let data=data.coord.lat
-    // // //       let data= data.coord.lon
-    // // //
-
-
-
-    // //       }}
-
-
-    //       });
-
+    
 });

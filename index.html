@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---Bootstrap link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!---- Link Css style-->
+    <!-- Link CSS style -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -37,31 +37,24 @@
                 <input type="text" placeholder="City Name" name="city" id="city" class="form-control">
                 <button id="submit" class="btn btn-primary"> Search City</button>
                 <span class="msg"></span>
-                <!--History tag needed-->
+             
             </div>
 
         </div>
 
         <br>
-        <ul class="list-group">
+        <ul class="list-group" >
             <li class="list-group-item"></li>
-
-            <li class="list-group-item list-group-item-primary"></li>
-            <li class="list-group-item list-group-item-secondary"></li>
-            <li class="list-group-item list-group-item-success"></li>
-            <li class="list-group-item list-group-item-danger"></li>
-            <li class="list-group-item list-group-item-warning"></li>
-            <li class="list-group-item list-group-item-info"></li>
-            <li class="list-group-item list-group-item-light"></li>
 
         </ul>
     </div>
-    </div>
+    
     <div class="card" id="Weatherlist">
         <div class="card-body">
             <div id="show"></div>
+             <div id="icon"></div>
             <div id="uvi"></div>
-            <div id="icon"></div>
+            
         </div>
     </div>
     <br>
@@ -71,96 +64,13 @@
 
     <div id="forecast"></div>
     <div id="icon2"></div>
-    <!-- <div class="row">
-        <div class="col-sm-3" style="background-color:blue">
-            <div id="date"> 08/20/2020</div>
-            <div class="info-icon"></div>
-            <h3 class="name">
-                <h3>
-                    <h3 class="status">Cloudy</h3>
-                    <div id="weatherInfo"></div>
-                    <p id="temp">Temp</p>
-                    <p id="humidity"> Humidity</p>
-        </div>
-        <div class="col-sm-3" style="background-color:blue">
-            <div id="date2"> 08/20/2020</div>
-            <div class="info-icon2"></div>
-            <h3 class="name">
-                <h3>
-                    <h3 class="status">Cloudy</h3>
-                    <div id="weatherInfo"></div>
-                    <p id="temp2">Temp</p>
-                    <p id="humidity2"> Humidity</p>
-        </div>
-        <div class="col-sm-3" style="background-color:blue">
-            <div id="date3"> 08/20/2020</div>
-            <div class="info-icon3"></div>
-            <h3 class="name">
-                <h3>
-                    <h3 class="status">Cloudy</h3>
-                    <div id="weatherInfo"></div>
-                    <p id="temp3">Temp</p>
-                    <p id="humidity3"> Humidity</p>
-        </div>
-        <div class="col-sm-3" style="background-color:blue">
-            <div id="date4"> 08/20/2020</div>
-            <div class="info-icon4"></div>
-            <h3 class="name">
-                <h3>
-                    <h3 class="status">Cloudy</h3>
-                    <div id="weatherInfo"></div>
-                    <p id="temp4">Temp</p>
-                    <p id="humidity4"> Humidity</p>
-                    <div>
-                    </div>
-        </div>
-    </div> -->
 
-    <!-- <div class="column" style="background-color:#aaa;">
-      <div class="details">
-        <h3 class="temp">30<h3>
-          <h3 class="status">Cloudy</h3>
-    <div id="weatherInfo"></div>
-    <div class="info-icon"></div>
-         <p>Temp</p>
-      <p>Huminity</p>
-    </div>
-    <div class="column" style="background-color:#bbb;">
-      <div class="details">
-        <h3 class="temp">30<h3>
-          <h3 class="status">Cloudy</h3>
-    <div id="weatherInfo"></div>
-    <div class="info-icon"></div>
-      <p>Date</p>
- <p>Temp</p>
- <p>Huminity</p>
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <div class="details">
-        <h3 class="temp">30<h3>
-          <h3 class="status">Cloudy</h3>
-    <div id="weatherInfo"></div>
-    <div class="info-icon"></div>
-      <p>Date</p>
- <p>Temp</p>
- <p>Huminity</p>
-    </div>
-    <div class="column" style="background-color:#ddd;">
-      <div class="details">
-        <h3 class="temp">30<h3>
-          <h3 class="status">Cloudy</h3>
-    <div id="weatherInfo"></div>
-    <div class="info-icon"></div>
-      <p>Date</p>
-      <p>Temp</p>
-      <p>Huminity</p>
-    </div>
-  </div> -->
-    <!-----Ajax Link--->
+
+    <!-- Script Links -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--- Jquery CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!---Moments Js script-->
+    <!--- Moments Js script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
 

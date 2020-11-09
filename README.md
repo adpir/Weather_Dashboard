@@ -18,7 +18,7 @@ The installation I used is:
 * Open Weather API -https://openweathermap.org/api
 * Save to the Local Storage
 
-
+* Deploy Pages : https://adpir.github.io/Weather_Dashboard/ 
 
 # License
 

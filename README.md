@@ -6,7 +6,7 @@ This app will run in the browser and feature dynamically updated HTML and CSS po
 
 
 #  Weather_Dashboard
-![image](./assets/background.png)
+![image](./assets/newscreenshot.png)
 
 # Installation
 The installation I used is:

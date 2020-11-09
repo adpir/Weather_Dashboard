@@ -52,12 +52,12 @@ $(document).ready(function() {
 
     }
 
-    // $(".list-group").on("click","li",function() { 
-    //     $("#uvi").empty();
-    //     city =$(this).text();
-    //     Weather(city);
-    //     FiveDaysForecast();
-    // })
+     $(".list-group").on("click","li",function() { 
+         $("#uvi").empty();
+         city =$(this).text();
+         Weather(city);
+         FiveDaysForecast();
+     })
     
     function KevinToFarhenheit(tempInKevin) {
         return ((tempInKevin - 273.15) * 1.8) + 32 

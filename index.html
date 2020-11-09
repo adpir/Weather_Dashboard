@@ -1,70 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!---Bootstrap link-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <!-- Link CSS style -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Weather Dashboard</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Nav Bar-->
     <div class="fixed-top">
-
-        <div class="bg-dark p-1">
-            <h2 class="text-white h2">Weather Dashboard</h2>
-        </div>
+      <div class="bg-dark p-1">
+        <h2 class="text-white h2">Weather Dashboard</h2>
+      </div>
     </div>
     <nav class="navbar navbar-dark bg-dark">
-        <button class="navbar-dark"></button>
+      <button class="navbar-dark"></button>
     </nav>
     <!--Search Bar-->
-    <br>
+    <br />
 
     <!-- The form -->
     <div class="container">
-        <div class="row">
+      <div class="row">
+        <br />
 
-            <br>
+        <h5>Search for a City:</h5>
 
-            <h5> Search for a City: </h5>
-
-            <div class="row form-group form-inline">
-                <input type="text" placeholder="City Name" name="city" id="city" class="form-control">
-                <button id="submit" class="btn btn-primary"> Search City</button>
-                <span class="msg"></span>
-             
-            </div>
-
+        <div class="row form-group form-inline">
+          <input
+            type="text"
+            placeholder="City Name"
+            name="city"
+            id="city"
+            class="form-control"
+          />
+          <button id="submit" class="btn btn-primary">Search City</button>
+          <span class="msg"></span>
         </div>
+      </div>
 
-        <br>
-        <ul class="list-group" >
-            <li class="list-group-item"></li>
-
-        </ul>
+      <br />
+      <ul class="list-group">
+        <li class="list-group-item"></li>
+      </ul>
     </div>
-    
+
     <div class="card" id="Weatherlist">
-        <div class="card-body">
-            <div id="show"></div>
-             <div id="icon"></div>
-            <div id="uvi"></div>
-            
-        </div>
+      <div class="card-body">
+        <div id="show"></div>
+        <div id="icon"></div>
+        <div id="uvi"></div>
+      </div>
     </div>
-    <br>
-    <br>
+    <br />
+    <br />
 
     <h2>5- Day Forecast</h2>
 
     <div id="forecast"></div>
     <div id="icon2"></div>
-
 
     <!-- Script Links -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -76,12 +79,9 @@
 
     <!---Add a Footer-->
     <div class="fixed-bottom">
-        <footer class="footer">
-            <p id="footer-text">&copy; Copyright</p>
-        </footer>
+      <footer class="footer">
+        <p id="footer-text">&copy; Copyright</p>
+      </footer>
     </div>
-
-
-</body>
-
+  </body>
 </html>

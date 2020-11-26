@@ -1,4 +1,4 @@
-<h1 align="center"> Weather Dashboard</h1>
+<h1 align="center"> Weather_Dashboard</h1>
  
 
 ### Description

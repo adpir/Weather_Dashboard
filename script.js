@@ -13,7 +13,7 @@ $(document).ready(function() {
            previouscity.push(city)
            console.log(previouscity)
             localStorage.setItem("#Weatherlist", JSON.stringify(previouscity));
-
+           
 
         } else {
             $(".msg").html('Error-Please enter a City');
@@ -47,7 +47,7 @@ $(document).ready(function() {
         for (i = 0; i < CityNames.length; i++) {
             let history= '<li class="list-group-item" (' + CityNames[i] + ')"> ' + CityNames[i] + '</li>';
             $(".list-group").prepend(history);
-
+           
 
 
         }
@@ -58,14 +58,12 @@ $(document).ready(function() {
          $("#uvi").empty();
          city =$(this).text();
          Weather(city);
-         FiveDaysForecast();
+         FiveDaysForecast(); 
+         
      })
 
     function KevinToFarhenheit(tempInKevin) {
         return ((tempInKevin - 273.15) * 1.8) + 32
-
-
-
 
     }
  // Performing an AJAX request with the queryURL
